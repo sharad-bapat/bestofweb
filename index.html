@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">    
+    <!-- Bootstrap CSS -->
+    <link href="css/bs.css" rel="stylesheet">
+    <link href="css/bow.css" rel="stylesheet">
+
+    <title>Best of Web!</title>
+  </head>
+  <body class="bg-light">
+    <div class="container-fluid ">
+        <nav class="navbar fixed-top navbar-light bg-light" style="max-height: 50px;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/favicon-32x32.png" alt="" width="32" height="32" class="d-inline-block align-text-top">
+                    <span class="fw-bold" style="font-size: 1.2rem;">Best of Web!</span>
+                </a>
+                <div class="float-end" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+                    aria-controls="offcanvasMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </div>
+            </div>
+        </nav>      
+    </div>    
+    <div class="offcanvas offcanvas-start bg-light small" tabindex="-1" id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabel" style="max-width:75vw; overflow-y: scroll;scrollbar-width: thin;">
+        <div class="container-fluid">
+            <div class="container-fluid mt-3">
+                <a class="navbar-brand text-dark" href="#" style="cursor: none;">
+                    <img src="images/favicon-32x32.png" alt="" width="32" height="32" class="d-inline-block align-text-top">
+                    <span class="fw-bold" style="font-size: 1.2rem;">Best of Web!</span>
+                </a>
+                <hr class="mb-4">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="btn-toggle-nav list-unstyled">
+                            <li class="mt-2 me-2">
+                                <span class="fw-bold text-main">
+                                    News
+                                </span>
+                                <button class="btn btn-toggle align-items-center rounded collapsed float-end" data-bs-toggle="collapse"
+                                    data-bs-target="#source-news-collapse" aria-expanded="false">
+                                </button>
+                                <div class="collapse" id="source-news-collapse">
+                                    <ul class="btn-toggle-nav list-group list-group-flush">
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas" 
+                                            onclick="fetchWOPosts('thewire.in')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">thewire.in</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas" onclick="fetchWOPosts('time.com')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">time.com</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas" 
+                                            onclick="fetchWOPosts('thestatesman.com')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">thestatesman.com</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(166419546)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">DG News</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer"  data-bs-dismiss="offcanvas" onclick="fetchPosts(176892389)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Global News</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer"  data-bs-dismiss="offcanvas" onclick="fetchWOPosts('worldnationnews.com')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">World Nation News</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(171782886)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">1947.com</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(126020344)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">VentureBeat</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(197693856)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Fortune</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(77118218)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Newsroom24x7</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(198147347)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Sahu News</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(190074382)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">SharqOnline</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas" 
+                                            onclick="fetchWOPosts('www.hollywoodreporter.com')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Hollywood Reporter</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(104427747)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">INDIA TV TIMESS</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(26599698)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Indian Today Online</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(150193535)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">SDN -- Science & Digital News</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('deadline.com')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Deadline</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mt-2 me-2">
+                                <span class="fw-bold text-main">
+                                    Bollywood
+                                </span>
+                                <button class="btn btn-toggle align-items-center rounded collapsed float-end" data-bs-toggle="collapse"
+                                    data-bs-target="#bollywood-collapse" aria-expanded="false">
+                                </button>
+                                <div class="collapse" id="bollywood-collapse">
+                                    <ul class="btn-toggle-nav list-group list-group-flush">
+                                        
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('highheelconfidential.com')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">highheelconfidential.com</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('filmykeeday.com')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">filmykeeday.com</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('filmcompanion.in')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">filmcompanion.in</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(130178575)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Badbola</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(129246078)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Urban Asian</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mt-2 me-2">
+                                <span class="fw-bold text-main">
+                                    Magazines
+                                </span>
+                                <button class="btn btn-toggle align-items-center rounded collapsed float-end" data-bs-toggle="collapse"
+                                    data-bs-target="#mags-collapse" aria-expanded="false">
+                                </button>
+                                <div class="collapse" id="mags-collapse">
+                                    <ul class="btn-toggle-nav list-group list-group-flush">
+                                    <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('www.sarita.in')">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <span class="fw-bold d-flex align-items-center">Sarita</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('www.champak.in')">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <span class="fw-bold d-flex align-items-center">Champak</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('tinkle.in')">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <span class="fw-bold d-flex align-items-center">Tinkle</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('grihshobha.in')">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <span class="fw-bold d-flex align-items-center">Grihshobha</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('merisaheli.com')">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <span class="fw-bold d-flex align-items-center">Meri Saheli</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('www.sarassalil.in')">
+                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                            <span class="fw-bold d-flex align-items-center">Saras Salil</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                    class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mt-2 me-2">
+                                <span class="fw-bold text-main">
+                                    Positivity
+                                </span>
+                                <button class="btn btn-toggle align-items-center rounded collapsed float-end" data-bs-toggle="collapse"
+                                    data-bs-target="#pos-collapse" aria-expanded="false">
+                                </button>
+                                <div class="collapse" id="pos-collapse">
+                                    <ul class="btn-toggle-nav list-group list-group-flush">
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('positivityblog.com')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Positivityblog</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(124297619)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">vibeschanger.com</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mt-2 me-2">
+                                <span class="fw-bold text-main">
+                                    Other
+                                </span>
+                                <button class="btn btn-toggle align-items-center rounded collapsed float-end" data-bs-toggle="collapse"
+                                    data-bs-target="#other-collapse" aria-expanded="false">
+                                </button>
+                                <div class="collapse" id="other-collapse">
+                                    <ul class="btn-toggle-nav list-group list-group-flush">
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('flickside.com')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Flickside</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchWOPosts('historyextra.com')">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">History Extra</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light  mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(150998827)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Popsicle Society</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(176658602)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Economic Motivation</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(70135762)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Longreads</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(16518427)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Motivatingdaily</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(156670177)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Hackaday</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                       
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(59022636)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Find Your Middle Ground</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                       
+                                       
+                                     
+                                     
+                                        
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(114793426)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">In Dianes Kitchen</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                     
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(98926692)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Legal News / Law News & Articles - Free Legal Helpline - Legal Tips : Legal
+                                                    India</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer"  data-bs-dismiss="offcanvas" onclick="fetchPosts(133888116)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">IndiaCorpLaw</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(61723818)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">Fashion For Lunch.</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(41974132)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">fashionandstylepolice</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(92754887)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">the fashionista cook</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(53484977)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">REFASHIONISTA</span>
+                                                <div class="d-flex align-items-center ">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item bg-light mt-2" style="cursor:pointer" data-bs-dismiss="offcanvas"  onclick="fetchPosts(24557832)">
+                                            <div class="d-flex gap-2 w-100 justify-content-between">
+                                                <span class="fw-bold d-flex align-items-center">allisongrayhurst.com</span>
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                        class="bi bi-chevron-double-right text-main" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class=" mt-4 mb-4">
+                <form class="form-floating px-2">
+                    <div class="input-group mb-3">
+                        <input id="input-Search" type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="button-Search">
+                        <button class="btn btn-main" type="button" id="button-Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg></button>
+                      </div>
+                </form>   
+            </div>
+        </div>
+    </div>
+    <div class="container justify-content-center" style="margin-top: 75px!important;">
+           </div>
+    <div class="container justify-content-center mt-4">
+        <ul class="list-group list-group-flush mt-1" id="bowPosts">
+        </ul>
+    </div>
+    <!-- <div class="container justify-content-center mt-4">
+        <ul class="list-group list-group-flush mt-1" id="bowSites">
+            <li class="list-group-item border-bottom py-4 bg-light mb-1">                                        
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                    <div>                               
+                        <h6 class="mb-0 mt-0 fw-bold text-main">1947.com</h6> 
+                        <p class="mb-0 mt-0 small fw-bold">1947.com is a venture from a group of patriots who wish to offer the genuine news</p> 
+                    </div>
+                    <img src="https://i0.wp.com/1947.com/wp-content/uploads/2020/03/cropped-1947_logo-2.jpg?fit=512%2C512&ssl=1" alt="" width="96" height="96" class="flex-shrink-0 sqimg rounded" onerror='imgErrorloadicon(this,"${v.source}")' />
+                </div>
+            </li>
+        </ul>
+    </div> -->
+   
+    <div class="modal bg-light" tabindex="-1" id="myModal">
+        <div class="modal-dialog modal-fullscreen-sm-down">
+            <div class="modal-content bg-light">
+                <div class="modal-header bg-light">
+                  <h5 class="modal-title" id="modalTitle">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light" id="modalBody" style="overflow-y: scroll; max-height: calc(100vh -100px); overflow-x: hidden;">
+                  <p>Modal body text goes here.</p>
+                </div>
+                <!-- <div class="modal-footer bg-light">
+                  <button type="button" class="btn btn-dark btn-sm" data-bs-dismiss="modal">Close</button>
+                </div> -->
+              </div>
+        </div>
+    </div>
+    
+    <div hidden>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/async.js"></script>       
+        <script src="js/bow.js"></script>     
+        <script>
+            function receiveData( data ) {
+              // Do something with the data here.
+              // For demonstration purposes, we'll simply log it.
+              console.log( data );
+              populateWOPosts(data);
+            }
+            </script>
+            <!-- <script src="https://theprint.in/wp-json/wp/v2/posts?per_page=10&context=view&_embed&_jsonp=receiveData"></script>  -->
+            <!-- <script src="https://trends.google.com/trends/api/realtimetrends?hl=en-IN&tz=0&cat=h&fi=0&fs=0&geo=IN&ri=300&rs=20" type="application/json"></script>  -->
+    </div>
+  </body>
+</html>
